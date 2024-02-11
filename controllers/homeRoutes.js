@@ -1,7 +1,6 @@
 const router = require("express").Router();
 
 router.get("/", async (req, res) => {
-
   try {
     res.render("login", {
       logged_in: req.session.logged_in,
@@ -12,7 +11,6 @@ router.get("/", async (req, res) => {
 });
 
 router.get("/signup", async (req, res) => {
- 
   try {
     res.render("signup", {
       logged_in: req.session.logged_in,
@@ -33,22 +31,22 @@ router.get("/dashboard", async (req, res) => {
   }
 });
 
-router.get("/event/*", async (req, res) => {
+router.get("/post/*", async (req, res) => {
   try {
-    res.render("event", {
+    res.render("post", {
       logged_in: req.session.logged_in,
-      eventById: true,
+      postById: true,
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
 
-router.get("/search", async (req, res) => {
+router.get("/home", async (req, res) => {
   try {
-    res.render("search", {
+    res.render("home", {
       logged_in: req.session.logged_in,
-      search: true,
+      home: true,
     });
   } catch (err) {
     res.status(500).json(err);
@@ -57,9 +55,9 @@ router.get("/search", async (req, res) => {
 
 router.get("/create", async (req, res) => {
   try {
-    res.render("eventForm", {
+    res.render("postForm", {
       logged_in: req.session.logged_in,
-      createEvent: true,
+      createPost: true,
     });
   } catch (err) {
     res.status(500).json(err);

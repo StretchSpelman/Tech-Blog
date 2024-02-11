@@ -2,7 +2,6 @@ const router = require("express").Router();
 const { User } = require("../../models");
 const { Op } = require("sequelize");
 
-
 router.post("/", async (req, res) => {
   try {
     const dbUserData = await User.create({
@@ -66,6 +65,19 @@ router.post("/logout", (req, res) => {
     });
   } else {
     res.status(404).end();
+  }
+});
+
+router.get("/name/:id", async (req, res) => {
+  try {
+    const userData = await User.findByPk(req.params.id);
+    if (!userData) {
+      res.status(404).json({ message: "User not found" }).end();
+    }
+    res.status(200).json(userData.name);
+  } catch (err) {
+    console.err(err);
+    res.status(500).json(err);
   }
 });
 
