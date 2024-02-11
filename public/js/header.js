@@ -1,5 +1,5 @@
 const dashboard = document.getElementById("dashboard");
-const search = document.getElementById("search");
+const home = document.getElementById("home");
 const login = document.getElementById("login");
 
 dashboard.addEventListener("click", () => {
@@ -11,6 +11,6 @@ if (login) {
     document.location.replace("/");
   });
 }
-search.addEventListener("click", () => {
-  document.location.replace("/search");
+home.addEventListener("click", () => {
+  document.location.replace("/home");
 });

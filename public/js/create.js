@@ -1,25 +1,14 @@
-const eventName = document.getElementById("eventName");
-const eventStart = document.getElementById("eventStart");
-const eventEnd = document.getElementById("eventEnd");
-const eventLocation = document.getElementById("location");
-const description = document.getElementById("description");
-const eventButton = document.getElementById("eventSubmit");
+const postTitle = document.getElementById("postTitle");
+const postContent = document.getElementById("postContent");
+const postSubmit = document.getElementById("postSubmit");
 
-const createEvent = async (
-  event,
-  eventStart,
-  eventEnd,
-  eventLocation,
-  description
-) => {
-  const response = await fetch("/api/events", {
+const createEvent = async (postTitle, postContent) => {
+  const response = await fetch("/api/post", {
     method: "POST",
     body: JSON.stringify({
-      event_name: event,
-      event_start: new Date(eventStart),
-      event_end: new Date(eventEnd),
-      event_location: eventLocation,
-      event_desc: description,
+      title: postTitle,
+      content: postContent,
+      created_by: sessionStorage.getItem("user_id"),
     }),
     headers: { "Content-Type": "application/json" },
   });
@@ -31,6 +20,11 @@ const createEvent = async (
     console.log(response);
   }
 };
+
+postSubmit.addEventListener("click", (e) => {
+  e.preventDefault();
+  createEvent(postTitle.value, postContent.value);
+});
 
 eventButton.addEventListener("click", (e) => {
   e.preventDefault();
