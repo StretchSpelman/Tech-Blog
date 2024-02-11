@@ -1,15 +1,25 @@
 const { Model, DataTypes } = require("sequelize");
 const sequelize = require("../config/connection");
 
-class EventUser extends Model {}
+class Comment extends Model {}
 
-EventUser.init(
+Comment.init(
   {
+    id: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      primaryKey: true,
+      autoIncrement: true,
+    },
+    content: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    event_id: {
+    post_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
@@ -19,8 +29,8 @@ EventUser.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: "eventsUser",
+    modelName: "comment",
   }
 );
 
-module.exports = EventUser;
+module.exports = Comment;
