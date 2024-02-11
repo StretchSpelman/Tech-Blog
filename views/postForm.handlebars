@@ -1,0 +1,31 @@
+{{#if errors}}
+<ul>
+    {{#each errors}}
+    <li>{{this.msg}}</li>
+    {{/each}}
+</ul>
+
+{{/if}}
+
+
+<form class="bg-slate-300 p-5 rounded-md">
+    <label for="postTitle" class="block text-black">Post Name:</label>
+
+    <input 
+    type="text"
+    id="postTitle"
+    name="postTitle"
+    class="w-full px-3 py-2 mt-1 mb-6 border rounded-md text-black focus:outline-none focus:ring focus:ring-blue-500"
+    value="{{formData.postTitle}}"/>
+
+    <label for="postContent" class="block text-black">Post:</label>
+    <textarea
+    id="postContent"
+    name="postContent"
+    class="w-full px-3 py-2 mt-1 mb-6 border rounded-md text-black focus:outline-none focus:ring focus:ring-blue-500">
+    {{formData.postContent}}</textarea>
+    
+    <button
+    id="postSubmit"
+    class="px-4 py-2 bg-green-600 text-white rounded-md cursor-pointer hover:bg-violet-600 active:bg-violet-700 focus:outline-none focus:ring focus:ring-violet-300">Create Post</button>
+</form>

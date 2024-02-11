@@ -2,7 +2,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>The Plug</title>
+    <title>The Tech Blog</title>
     <link rel="stylesheet" href="/css/reset.css" />
     <link
       rel="stylesheet"
@@ -12,11 +12,11 @@
   </head>
 
   <body class="full-background">
-    <header class="p-6 static flex text-xl bg-blue-500 text-white">
-      <h1 class="flex-1 text-4xl cursor-default">The Plug</h1>
+    <header class="p-6 static flex text-xl bg-green-600 text-white">
+      <h1 class="flex-1 text-4xl cursor-default">The Tech Blog</h1>
       <div class="flex">
         <p class="flex-1 ml-5 my-2 cursor-pointer" id="dashboard">Dashboard</p>
-        <p class="flex-1 ml-5 my-2 cursor-pointer" id="search">Search</p>
+        <p class="flex-1 ml-5 my-2 cursor-pointer" id="home">Home</p>
         {{#if logged_in}}
           <p id="logout" class="flex-1 ml-5 my-2 cursor-pointer">Logout</p>
         {{else}}
@@ -32,13 +32,13 @@
       <script src="/js/logout.js"></script>
     {{/if}}
     <script src="/js/header.js"></script>
-    {{#if search}}
-      <script src="/js/search.js"></script>
+    {{#if home}}
+      <script src="/js/home.js"></script>
     {{/if}}
-    {{#if eventById}}
-      <script src="/js/event.js"></script>
+    {{#if postById}}
+      <script src="/js/post.js"></script>
     {{/if}}
-    {{#if createEvent}}
+    {{#if createPost}}
       <script src="/js/create.js"></script>
     {{/if}}
     {{#if dashboard}}

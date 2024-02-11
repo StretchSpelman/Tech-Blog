@@ -103,7 +103,7 @@ router.delete("/:id", async (req, res) => {
 
     return res.status(200).json({ message: "The Post deleted successfully!" });
   } catch (err) {
-    console.erroror(err);
+    console.error(err);
     return res.status(500).json({ error: "Internal Server Error" });
   }
 });

@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { User, Post, Coment } = require("../../models");
+const { User, Post, Comment } = require("../../models");
 
 router.get("/:id", async (req, res) => {
   try {
@@ -10,7 +10,7 @@ router.get("/:id", async (req, res) => {
     });
     res.status(200).json(comments);
   } catch (err) {
-    console.err(err);
+    console.error(err);
     res.status(500).json(err);
   }
 });
@@ -33,7 +33,7 @@ router.post("/:id", async (req, res) => {
     });
     res.status(200).json(commentData);
   } catch (err) {
-    console.err(err);
+    console.error(err);
     res.status(500).json(err);
   }
 });

@@ -32,7 +32,7 @@ const getPost = async () => {
       deletePostButton.onclick = deletePost;
       deletePostButton.id = "deletePost";
       deletePostButton.classList.add(
-        "bg-blue-500",
+        "bg-green-600",
         "text-white",
         "px-4",
         "py-2",
@@ -47,7 +47,7 @@ const getPost = async () => {
       updatePostButton.id = "updatePost";
       updatePostButton.onclick = updatePostForm;
       updatePostButton.classList.add(
-        "bg-blue-500",
+        "bg-green-600",
         "text-white",
         "px-4",
         "py-2",
@@ -62,7 +62,7 @@ const getPost = async () => {
     document.getElementById("title").textContent = postData.title;
 
     const descriptionElement = document.getElementById("description");
-    descriptionElement.innerHTML = `<p>${postData.content}<br><br>-${userData}</p>`;
+    descriptionElement.innerHTML = `<p id="postContent">${postData.content}</p><p>-${userData}</p>`;
 
     let commentSection = "";
     for (let i = 0; i < commentData.length; i++) {
@@ -129,7 +129,7 @@ const deletePost = async () => {
 
 const updatePostForm = async () => {
   const title = document.getElementById("title");
-  const content = document.getElementById("description");
+  const content = document.getElementById("postContent");
 
   const updateTitle = document.createElement("input");
   const updateContent = document.createElement("textarea");
@@ -164,7 +164,7 @@ const updatePost = async () => {
       },
       body: JSON.stringify({
         title: document.getElementById("title").value,
-        content: document.getElementById("description").value,
+        content: document.getElementById("postContent").value,
       }),
     });
 

@@ -1,9 +1,9 @@
 const sequelize = require("../config/connection");
-const { User, Event, EventUser } = require("../models");
+const { User, Post, Comment } = require("../models");
 
 const userData = require("./userData.json");
-const events = require("./events.json");
-const rsvp = require("./rsvp.json");
+const posts = require("./posts.json");
+const comments = require("./comments.json");
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -12,12 +12,12 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  await Event.bulkCreate(events, {
+  await Post.bulkCreate(posts, {
     individualHooks: true,
     returning: true,
   });
 
-  await EventUser.bulkCreate(rsvp, {
+  await Comment.bulkCreate(comments, {
     individualHooks: true,
     returning: true,
   });

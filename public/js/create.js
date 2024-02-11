@@ -3,6 +3,7 @@ const postContent = document.getElementById("postContent");
 const postSubmit = document.getElementById("postSubmit");
 
 const createEvent = async (postTitle, postContent) => {
+
   const response = await fetch("/api/post", {
     method: "POST",
     body: JSON.stringify({
@@ -23,16 +24,8 @@ const createEvent = async (postTitle, postContent) => {
 
 postSubmit.addEventListener("click", (e) => {
   e.preventDefault();
-  createEvent(postTitle.value, postContent.value);
-});
-
-eventButton.addEventListener("click", (e) => {
-  e.preventDefault();
   createEvent(
-    eventName.value,
-    eventStart.value,
-    eventEnd.value,
-    eventLocation.value,
-    description.value
+    postTitle.value,
+    postContent.value,
   );
 });

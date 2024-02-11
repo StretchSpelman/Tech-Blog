@@ -32,14 +32,17 @@ router.post("/login", async (req, res) => {
         ],
       },
     });
+    console.log(userData)
     if (!userData) {
       res.status(400).json({ message: "Incorrect email or password" });
+      console.log("bad")
       return;
     }
 
     const validPassword = await userData.checkPassword(req.body.password);
     if (!validPassword) {
       res.status(400).json({ message: "Incorrect email or password" });
+      console.log("wrong")
       return;
     }
 
@@ -53,7 +56,7 @@ router.post("/login", async (req, res) => {
     });
   } catch (err) {
     console.log(err);
-    res.status(400).json(err);
+    res.status(500).json(err);
   }
 });
 
@@ -76,7 +79,7 @@ router.get("/name/:id", async (req, res) => {
     }
     res.status(200).json(userData.name);
   } catch (err) {
-    console.err(err);
+    console.error(err);
     res.status(500).json(err);
   }
 });

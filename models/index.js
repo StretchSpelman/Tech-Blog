@@ -1,6 +1,6 @@
 const User = require("./Users");
 const Post = require("./Post");
-const Comment = require("./Comment");
+const Comment = require("./Comments");
 
 User.hasOne(Post, {
   foreignKey: "created_by",
