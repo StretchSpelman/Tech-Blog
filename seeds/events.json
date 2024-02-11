@@ -1,0 +1,26 @@
+[
+  {
+    "event_name": "Tuacahn Theatre",
+    "event_start": "2024-05-26T08:00:00Z",
+    "event_end": "2024-05-27T17:00:00Z",
+    "event_location": "Ivins, Utah",
+    "event_desc": "Come join us for some theatrical performances here at the Utah Tuacahn",
+    "created_by": 11
+  },
+  {
+    "event_name": "Tech Expo",
+    "event_start": "2024-06-10T10:00:00Z",
+    "event_end": "2024-06-07T18:00:00Z",
+    "event_location": "Grand Rapids, Michigan",
+    "event_desc": "Come join us for multiple training classes including auto body,light-duty,heavy-duty,diesel and more!",
+    "created_by": 2
+  },
+  {
+    "event_name": "Gaming Convention",
+    "event_start": "2024-11-23T14:00:00Z",
+    "event_end": "2024-11-25T22:00:00Z",
+    "event_location": "Pasadena, California",
+    "event_desc": "Come join us for our gaming convention with booths, gaming setups, merch and more!",
+    "created_by": 3
+  }
+]

@@ -1,4 +1,4 @@
-# Tech-Blog
+# The Plug
 
 ## Description
 
@@ -32,9 +32,9 @@ Welcome to Tech Blog here we, Empower tech enthusiasts to connect, collaborate, 
 ![alt text](./Assets/Image/image.png)
 
 [Tech Blog](https://github.com/StretchSpelman/Tech-Blog)
-Visit the homepage, click "Login" or click "Sign Up" for an account if you don't already have one.
-Option: 1, Account login: click on "login" in the navigation menu - enter Username and Password then click "Sign In" to proceed.
-Option: 2, Account Sign Up: click on "Sign Up" in the navigation menu - once open, enter Username, Email and Password then click "Sign Up" to proceed.
+Visit the homepage, "Login" or "Sign Up" for an account if you don't already have one.
+Option: 1) Account login: click on "login" in the navigation menu - enter Username and Password then click "Sign In" to proceed.
+Option: 2) Account Sign Up: click on "Sign Up" in the navigation menu - once open, enter Username, Email and Password then click "Sign Up" to proceed.
 Once you have an account, you can search or create events in your area.
 
 ## Credits
