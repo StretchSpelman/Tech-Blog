@@ -1,13 +1,11 @@
 const router = require("express").Router();
 const userRoutes = require("./userRoutes");
-const eventsRoutes = require("./eventsRoutes");
-const eventsUsersRoutes = require("./eventsUsersRoutes");
-const emailRoutes = require("./emailRoutes");
-const searchRoutes= require("./searchRoutes");
+const postRoutes = require("./postRoutes");
+const commentRoutes = require("./commentRoutes");
+
+
 router.use("/user", userRoutes);
-router.use("/events", eventsRoutes);
-router.use("/rsvp", eventsUsersRoutes);
-router.use("/email", emailRoutes);
-router.use("/search", searchRoutes);
+router.use("/post", postRoutes);
+router.use("/comment", commentRoutes);
 
 module.exports = router;
