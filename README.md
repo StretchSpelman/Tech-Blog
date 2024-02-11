@@ -1,10 +1,12 @@
-# Tech-Blog
+# The Tech Blog
 
 ## Description
 
-Welcome to Tech Blog here we, Empower tech enthusiasts to connect, collaborate, and stay informed. Create and join tech events seamlessly, fostering a dynamic community for passionate individuals in the ever-evolving world of technology.
+The Tech Blog is a blog to post and connect with other developers by either creating posts or commenting on others!
 
 ## Table of Contents
+
+- [Description](#description)
 - [Installation](#installation)
 - [Usage](#usage)
 - [Credits](#credits)
@@ -12,37 +14,22 @@ Welcome to Tech Blog here we, Empower tech enthusiasts to connect, collaborate, 
 
 ## Installation
 
-- JSON:[ JSON](https://www.npmjs.com/package/json)
-- Dynamic JavaScript
-- Node.js [Version 16.18.1](https://nodejs.org/en/blog/release/v16.18.1/)
-- Express.js:[Express.js](https://expressjs.com/en/starter/installing.html)
-- Connect Session Store using Sequelize: [7.0.4](https://www.npmjs.com/package/connect-session-sequelize)
-- Dotenv: [8.6.0](https://www.npmjs.com/package/dotenv)
-- Express: [4.17.1](https://www.npmjs.com/package/express)
-- Express Handlebars: [5.2.0](https://www.npmjs.com/package/express-handlebars)
-- Express-Session: [1.17.1](https://www.npmjs.com/package/express-session)
-- Handlebars.js: [4.7.6](https://www.npmjs.com/package/handlebars)
-- Node MySql2: [2.3.3](https://www.npmjs.com/package/mysql2)
-- Sequelize: [6.29.3](https://www.npmjs.com/package/sequelize)
-- License Badge: [Shields.io](https://shields.io/)
-- Visual Studio Code: [Website](https://code.visualstudio.com/)
+To install The The Tech Blog, follow these steps:
+
+1. Download the latest release from our GitHub repository.
+2. Run npm i for the installation.
+3. Run the installation script included in the package.
 
 ## Usage
 
-![alt text](./Assets/Image/image.png)
+Visit our official website at [The Tech Blog](https://stretchs-tech-blog-a3c6dc1a10d9.herokuapp.com/).
+Once installed, you can start using The Tech Blog by launching the application and following the on-screen instructions. Here are some basic usage tips:
 
-[Tech Blog](https://github.com/StretchSpelman/Tech-Blog)
-Visit the homepage, click "Login" or click "Sign Up" for an account if you don't already have one.
-Option: 1, Account login: click on "login" in the navigation menu - enter Username and Password then click "Sign In" to proceed.
-Option: 2, Account Sign Up: click on "Sign Up" in the navigation menu - once open, enter Username, Email and Password then click "Sign Up" to proceed.
-Once you have an account, you can search or create events in your area.
+- First either log in or create an account
+- Then you can either view posts or create one depending on what you would like to do.
 
 ## Credits
 
-APIs:
-Email API: [Twilio SendGrid](https://sendgrid.com/en-us)
-CSS Framework: [Tailwind CSS](https://tailwindcss.com/)
-
 ## License
 
-Please refer to the LICENSE in the repo.
+The Tech Blog is licensed under the MIT License. See the LICENSE file for more details.
